@@ -1,0 +1,22 @@
+example:
+  target: dev
+  outputs:
+    dev:
+      type: mariadb
+      server: localhost
+      port: 3306
+      schema: example
+      username: root
+      password: mariadb
+      driver: MySQL ODBC 8.0 ANSI Driver
+minerva:
+  target: dev
+  outputs:
+    dev:
+      type: mariadb
+      server: localhost
+      port: 3306
+      schema: minerva
+      username: root
+      password: mariadb
+      driver: MySQL ODBC 8.0 ANSI Driver
