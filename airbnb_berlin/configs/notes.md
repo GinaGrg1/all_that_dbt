@@ -1,5 +1,3 @@
-### Using the starter project
-
 Useful commands:
 - dbt run
 - dbt test
@@ -13,7 +11,8 @@ INSERT INTO AIRBNB.RAW.RAW_REVIEWS VALUES
 (3176, CURRENT_TIMESTAMP(), 'Regina', 'Excellent Stay', 'positive');
 ```
 
-- Ephemeral models are just saved as CTEs. These will not be created when run `dbt run` command. The CTEs will be saved in target/run/dbtlearn/models/src/ 
+- Ephemeral models are just saved as CTEs. These will not be created when run `dbt run` command.
+- The CTEs will be saved in target/run/airbnb_berlin/models/src/ 
 
 - Seeds are local files that you can upload to data warehouse from dbt
 - Source is an abstraction layer on the top of your input tables
