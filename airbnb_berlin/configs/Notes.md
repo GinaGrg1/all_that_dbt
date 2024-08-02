@@ -1,8 +1,11 @@
-Useful commands:
-- dbt run
+#### Useful commands:
+- dbt run [ dbt run --select <model_name>]
 - dbt test
 - dbt seed
 - dbt compile
+- dbt snapshot
+- dbt source freshness
+- dbt deps [ to install packages listed in packages.yml file ]
 
 
 #### Adding a row for incremental load testing
@@ -43,3 +46,42 @@ If it doesnt find any fresh data within 1 hour, it will warn. Use the following 
 ```
 $ dbt source freshness
 ```
+
+
+### SCD Type 2 [ Snapshots ]
+Eg:
+```
+{% snapshot raw_listings_scd %}
+
+{{
+   config(
+       target_schema='dev',
+       unique_key='id',
+       strategy='timestamp',
+       updated_at='updated_at',
+       invalidate_hard_deletes=True
+   )
+}}
+
+SELECT * FROM {{ source('airbnb', 'listings') }}
+
+{% endsnapshot %}
+```
+
+`UPDATE AIRBNB.RAW.RAW_LISTINGS SET MINIMUM_NIGHTS=30, UPDATED_AT=CURRENT_TIMESTAMP() WHERE ID=3176;`
+
+#### schema.yml file
+Define tests in this file. We can also define relationships between tables here.
+
+
+#### Tests
+There are four built-in generic tests:
+- unique
+- not_null
+- accepted_values
+- Relationships
+You can also create your own custom generic tests or import tests from dbt packages. This will go under tests folder.
+
+#### Macros [ Similar to functions ]
+
+
