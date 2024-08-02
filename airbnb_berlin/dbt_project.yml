@@ -1,8 +1,9 @@
-name: 'airbnb_berlin'
+name: 'dbtlearn'
 version: '1.0.0'
 config-version: 2
 
-profile: 'airbnb_berlin'
+# This setting configures which "profile" dbt uses for this project.
+profile: 'dbtlearn'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -19,11 +20,18 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
+# By default, all models are views. For ephemeral models, the views in src 
+# needs to be deleted manually in snowflake.
+# Eg 'DROP VIEW AIRBNB.DEV.SRC_HOSTS;'
 models:
-  airbnb_berlin:
+  dbtlearn:
     +materialized: view
     dim:
       +materialized: table
+    src:
+      +materialized: ephemeral
+
+vars:
+  raw_reviews_name: reviews
+  raw_hosts_name: hosts
+  raw_listings_name: listings
