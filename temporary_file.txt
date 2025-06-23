@@ -1,0 +1,41 @@
+Canopius Group
+About the job
+Role: Senior Data Engineer - 12 Month FTC (Finance and Actuarial Data Integration) 
+The purpose of the role is to provide data engineering expertise to deliver the next phase of our data programme which will integrate our Finance and Actuarial modules into the new Azure Data Platform.r
+This role is an opportunity to apply your expertise in Azure technologies and data engineering techniques to a key business project. 
+It requires an in-depth technical knowledge combined with the ability to engage directly with senior business stakeholders in our Finance and Actuarial domains.
+While the role focuses on development and delivery within our Azure platform, it will also require expertise in SQL Server as much of the functionality being transitioned to Azure and optimised currently resides in this technology.
+Due to the nature of the project, the ideal candidate will be an experienced data engineer looking for a challenge who is enthusiastic about using technology to accelerate change within our industry.
+
+The candidate must have strong experience and knowledge of Finance and Actuarial processes within insurance, and the ability to work directly with business stakeholders, 
+understand business problems and deliver effective solutions. They should be comfortable collaborating and working as part of a dynamic multi-disciplinary team.
+
+Key Responsibilities:
+
+		Developing data solutions on the Microsoft Azure platform.
+		Providing technical guidance and support to the development team as a senior member of the project development team.
+		Working to bridge any gaps between the offshore, third-party development team, the internal development team and business stakeholders on the project.
+		Planning, tracking and managing the progress of development activities in coordination with project managers and scrum masters.
+		Fostering communications and relationships between team members and stakeholders to ensure that expectations are managed and that teams are aligned.
+		Ensuring that new solutions are tested and documented as required.
+		Development of good internal client relationships.
+		Management of own task list and ensuring that plans are agreed.
+
+Skills & Experience:
+
+		Thorough understanding of database structures, design and performance optimisation techniques.
+		Experience with Azure data technologies which must include Azure Databricks and Azure SQL Database development
+		An understanding of London Market insurance data, processes and terminology
+		Experience working on data projects in the Finance and Actuarial business domains
+		Experience with data transformation and modelling techniques.
+		Thorough understanding and experience with data warehousing concepts and dimensional modelling.
+		Experience with ETL processes and tools (Data Factory, T-SQL, Azure Databricks).
+		Experience with Azure DevOps, including branching and release/deployment strategies; GIT, CI/CD, DevOps Pipelines.
+		Hands on experience developing and supporting commercial enterprise data solutions in a cloud hosted environment.
+		Demonstrable experience of supporting internal Analytics and reporting functions.
+		Experience working in an Agile and Scrum environment.
+		Thorough understanding and experience with all aspects of SQL Server including the building of stored procedures to support complex data transformations. 
+Our benefits 
+We offer all employees a comprehensive benefits package that focuses on their whole wellbeing. This includes hybrid working, a competitive base salary, non-contributory pension, 
+discretionary bonus, insurances including health (family) and dental cover, and many other benefits to enhance financial, physical, social and psychological health.
+
