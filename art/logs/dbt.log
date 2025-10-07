@@ -1,0 +1,49 @@
+[0m16:53:11.353349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230A42DFD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230A5573880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230A5570970>]}
+
+
+============================== 16:53:11.360538 | 3189493b-df86-4871-b690-fd2d06982b12 ==============================
+[0m16:53:11.360538 [info ] [MainThread]: Running with dbt=1.10.13
+[0m16:53:11.362538 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\ReginaGurung\\.dbt', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt init', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:53:20.947806 [debug] [MainThread]: Starter project path: C:\Users\ReginaGurung\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+[0m16:53:20.978265 [info ] [MainThread]: 
+Your new dbt project "artgallery_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:53:20.980267 [info ] [MainThread]: Setting up your profile.
+[0m16:56:06.907375 [info ] [MainThread]: Profile artgallery_project written to C:\Users\ReginaGurung\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:56:06.911375 [debug] [MainThread]: Command `dbt init` succeeded at 16:56:06.910377 after 175.64 seconds
+[0m16:56:06.912376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230A42DFD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230A5571CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230A53DC520>]}
+[0m16:56:06.913376 [debug] [MainThread]: Flushing usage events
+[0m16:56:07.466654 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:56:24.421121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76A50FCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76B7A1CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76B7A1570>]}
+
+
+============================== 16:56:24.435961 | 8aa64b08-f133-4bdb-89e2-db59d398d43a ==============================
+[0m16:56:24.435961 [info ] [MainThread]: Running with dbt=1.10.13
+[0m16:56:24.436960 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'empty': 'None', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\ReginaGurung\\.dbt'}
+[0m16:56:24.468184 [info ] [MainThread]: dbt version: 1.10.13
+[0m16:56:24.469300 [info ] [MainThread]: python version: 3.10.11
+[0m16:56:24.469511 [info ] [MainThread]: python path: C:\Users\ReginaGurung\AppData\Local\Programs\Python\Python310\python.exe
+[0m16:56:24.469511 [info ] [MainThread]: os info: Windows-10-10.0.22631-SP0
+[0m16:56:25.452256 [info ] [MainThread]: Using profiles dir at C:\Users\ReginaGurung\.dbt
+[0m16:56:25.453889 [info ] [MainThread]: Using profiles.yml file at C:\Users\ReginaGurung\.dbt\profiles.yml
+[0m16:56:25.454924 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ReginaGurung\Downloads\dbt-core-stuff\all_that_dbt\art\dbt_project.yml
+[0m16:56:25.456925 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m16:56:25.458927 [debug] [MainThread]: Command `dbt debug` failed at 16:56:25.458927 after 1.13 seconds
+[0m16:56:25.459928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76A50FCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7683B8A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D76B7A24A0>]}
+[0m16:56:25.460928 [debug] [MainThread]: Flushing usage events
+[0m16:56:25.910446 [debug] [MainThread]: An error was encountered while trying to flush usage events
