@@ -1,10 +1,10 @@
 {#
-What it does
-This macro customizes schema names to support a multi-developer workflow and enforce environment separation. 
-Its primary function is to create unique, user-specific schemas in the development environment.
+dbt uses a default macro called generate_schema_name to determine the name of the schema that a model should be built in.
 
 How it works
-- dev target: Appends the developer username to the custom schema name. For example, a model configured with `schema: intermediate` run by user `jane.doe@company.com` will be built in the schema `INTERMEDIATE_JANEDOE`. This prevents developers from overwriting objects created by other developers.
+- dev target: Appends the developer username to the custom schema name. For example, a model configured with `schema: intermediate` 
+    run by user `jane.doe@company.com` will be built in the schema `INTERMEDIATE_JANEDOE`. 
+    This prevents developers from overwriting objects created by other developers.
 - qa & prod targets: Uses the custom schema name directly without any user suffix, creating a clean, shared schema for production and testing builds.
 - If no custom schema is configured, it falls back to the default schema in `profiles.yml`.
 
