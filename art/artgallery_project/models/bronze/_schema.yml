@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: bronze__vw_artist_profiles
-    description: Staging model for artist profiles. One row per artist.
+    description: "{{ doc('artist_profile_doc') }}"
     config:
       database: BRONZE
       schema: CRM_DATA
