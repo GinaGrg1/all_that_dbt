@@ -32,8 +32,11 @@ models:
   artgallery_project:
     # Config indicated by + and applies to all files under models/example/
     bronze:
-      materialized: view
+      +materialized: view
     silver:
-      materialized: view
+      +materialized: view
     gold:
-      materialized: view
+      +materialized: view
+
+flags:
+  require_generic_test_arguments_property: false

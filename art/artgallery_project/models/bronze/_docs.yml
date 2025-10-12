@@ -1,6 +1,0 @@
-docs:
-  - name: artist_profile_doc
-    description: |
-      Staging model for artist profiles. One row per artist.
-      This table contains event-level data, including user interactions
-      and timestamps. It is used for tracking user behavior across the platform.
