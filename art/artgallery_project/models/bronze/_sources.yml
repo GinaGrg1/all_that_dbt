@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: gallery_data
+    database: PROD_RAW
+    schema: SOURCE_DATA
+    tables:
+      - name: artist_profiles
+      - name: artwork_inventory
+      - name: customer_data
+      - name: sales_transactions
