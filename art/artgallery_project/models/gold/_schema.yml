@@ -4,8 +4,8 @@ models:
   - name: gold__monthly_commission_report
     description: "Monthly aggregated report of sales and commissions per artist."
     config:
-      database: GOLD
-      schema: REPORTS
+      database: gold
+      schema: reports
     columns:
       - name: report_month
         description: "The first day of the month for which the report is generated."
