@@ -1,4 +1,4 @@
-name: Art Gallery DBT Workflow Run
+name: ArtGallery-DBT-Workflow-Run
 
 on:
   push:
@@ -6,7 +6,9 @@ on:
       - main
     paths:
       - 'art/**'
-
+      
+  workflow_dispatch:
+  
 jobs:
   dbt-run:
     runs-on: ubuntu-latest
