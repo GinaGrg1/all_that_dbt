@@ -1,3 +1,5 @@
+name: Art Gallery DBT Workflow Run
+
 on:
   push:
     branches:
