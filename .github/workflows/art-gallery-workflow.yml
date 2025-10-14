@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'art/**'
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Art Repository
+        uses: actions/checkout@v4
+
+      - name: Use Python 3.10.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10.x
+
+      - name: Install Dependencies
+        run: |
+          ls
+    
