@@ -32,5 +32,5 @@ jobs:
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
-          dbt debug
+          dbt run --target prod --select gold__monthly_commission_report
           
