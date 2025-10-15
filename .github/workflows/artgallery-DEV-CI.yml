@@ -16,14 +16,20 @@ jobs:
     steps:
       - name: Checkout Art Repository
         uses: actions/checkout@v4
-
       - name: Use Python 3.10.x
         uses: actions/setup-python@v4
         with:
           python-version: 3.10.x
-
       - name: Install Dependencies
         run: |
           cd art/artgallery_project
           pip install -r requirements.txt
-    
+      - name: Create dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          cp art/artgallery_project/profiles.yml ~/.dbt/ 
+      - name: Execute dbt debug
+        run: |
+          cd art/artgallery_project
+          dbt debug
+          
