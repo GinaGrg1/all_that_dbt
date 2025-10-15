@@ -24,5 +24,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          ls
+          cd art/artgallery_project
+          pip install -r requirements.txt
     
