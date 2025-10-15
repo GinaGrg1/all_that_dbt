@@ -36,6 +36,8 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           echo "${{ secrets.PROFILES_YML }}" > ~/.dbt/profiles.yml
+          head -n 10 ~/.dbt/profiles.yml
+          
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
