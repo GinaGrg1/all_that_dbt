@@ -28,10 +28,15 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           echo "${{ secrets.PROFILES_YML }}" > ~/.dbt/profiles.yml
+      - name: Install dependencies
+        run: |
+          cd art/artgallery_project
+          dbt deps --target prod
       - name: Create seed tables
         run: |
           cd art/artgallery_project
-          dbt seed --target prod
+          echo "Runnin LS -LA"
+          ls -la
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
