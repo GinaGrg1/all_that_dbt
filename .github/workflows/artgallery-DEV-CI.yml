@@ -30,7 +30,8 @@ jobs:
           echo "${{ secrets.PROFILES_YML }}" > ~/.dbt/profiles.yml
       - name: Create seed tables
         run: |
-          dbt seed
+          cd art/artgallery_project
+          dbt seed --target prod
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
