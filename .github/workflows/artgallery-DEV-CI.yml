@@ -27,7 +27,7 @@ jobs:
       - name: Create dbt profile
         run: |
           mkdir -p ~/.dbt
-          cp art/artgallery_project/profiles.yml ~/.dbt/ 
+          cp art/artgallery_project/dbt_profiles/profiles.yml ~/.dbt/ 
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
