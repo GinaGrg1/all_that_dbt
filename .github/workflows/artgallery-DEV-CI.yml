@@ -28,9 +28,11 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           echo "${{ secrets.PROFILES_YML }}" > ~/.dbt/profiles.yml
-          
+      - name: Create seed tables
+        run: |
+          dbt seed
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
-          dbt run --target prod --select gold__monthly_commission_report
+          dbt run --target prod --select models/bronze
           
