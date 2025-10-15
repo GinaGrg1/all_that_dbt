@@ -13,14 +13,6 @@ jobs:
   dbt-run:
     runs-on: ubuntu-latest
 
-    env:
-      SNOWFLAKE_ACCOUNT_ID: ${{ secrets.SNOWFLAKE_ACCOUNT_ID }}  
-      SNOWFLAKE_USERNAME: ${{ secrets.SNOWFLAKE_USERNAME }}  
-      SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}  
-      USER_ROLE: ${{ secrets.USER_ROLE }}  
-      DATABASE: ${{ secrets.DATABASE }}  
-      WAREHOUSE: ${{ secrets.WAREHOUSE }}  
-      SCHEMA: ${{ secrets.SCHEMA }}  
     steps:
       - name: Checkout Art Repository
         uses: actions/checkout@v4
@@ -35,8 +27,7 @@ jobs:
       - name: Create dbt profile
         run: |
           mkdir -p ~/.dbt
-          echo "${{ secrets.PROFILES_YML }}" > ~/.dbt/profiles.yml
-          head -n 10 ~/.dbt/profiles.yml
+          echo "${{ secrets.DEV_PROFILES_YML }}" > ~/.dbt/profiles.yml
           
       - name: Execute dbt debug
         run: |
