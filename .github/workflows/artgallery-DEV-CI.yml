@@ -35,8 +35,7 @@ jobs:
       - name: Create seed tables
         run: |
           cd art/artgallery_project
-          echo "Runnin LS -LA"
-          ls -la
+          dbt seed --target prod
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
