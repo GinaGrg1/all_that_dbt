@@ -27,9 +27,17 @@ jobs:
       - name: Create dbt profile
         run: |
           mkdir -p ~/.dbt
-          cp art/artgallery_project/profiles.yml ~/.dbt/ 
+          echo "${{ secrets.PROFILES_YML }}" > ~/.dbt/profiles.yml
+      - name: Install dependencies
+        run: |
+          cd art/artgallery_project
+          dbt deps --target prod
+      - name: Create seed tables
+        run: |
+          cd art/artgallery_project
+          dbt seed --target prod
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
-          dbt debug
+          dbt run --target prod --select models/bronze
           
