@@ -20,7 +20,7 @@ It prefixes the database name specified in a model configuration with an environ
     {%- else -%}
         {%- set upper_custom_database_name = custom_database_name | upper -%}
 
-        {%- if target.name == "dev" -%} 
+        {%- if target.name == "dev" or target.name == "local" -%} 
             {%- set dev_database = "DEV_" + upper_custom_database_name -%}
             {{ dev_database }}
         {%- elif target.name[0:2].lower() == "qa" -%}
