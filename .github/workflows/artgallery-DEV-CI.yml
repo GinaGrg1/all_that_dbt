@@ -2,7 +2,7 @@ name: ArtGallery-DBT-Workflow-Run
 
 on:
   schedule:
-    - cron: '45 11 * * 1-5'
+    - cron: '45 11 * * 1-5' # London time 12:45
   
 jobs:
   dbt-run:
