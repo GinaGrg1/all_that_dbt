@@ -31,13 +31,13 @@ jobs:
       - name: Install dependencies
         run: |
           cd art/artgallery_project
-          dbt deps --target prod
+          dbt deps --target dev
       - name: Create seed tables
         run: |
           cd art/artgallery_project
-          dbt seed --target prod
+          dbt seed --target dev
       - name: Execute dbt debug
         run: |
           cd art/artgallery_project
-          dbt run --target prod --select models/bronze
+          dbt run --target dev --select models/bronze
           
