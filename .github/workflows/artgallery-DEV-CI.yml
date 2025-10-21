@@ -9,7 +9,7 @@ on:
       
   workflow_dispatch:
   schedule:
-    - cron: '25 12 * * 1-5'
+    - cron: '0 13 * * 1-5'
   
 jobs:
   dbt-run:
