@@ -1,6 +1,13 @@
 name: ArtGallery-DBT-Workflow-Run
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'art/**'
+      
+  workflow_dispatch:
   schedule:
     - cron: '45 11 * * 1-5' # London time 12:45
   
