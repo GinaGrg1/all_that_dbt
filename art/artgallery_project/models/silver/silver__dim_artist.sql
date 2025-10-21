@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='incremental'
+        )
+}}
+
 with artists as (
     select
         artist_id,
