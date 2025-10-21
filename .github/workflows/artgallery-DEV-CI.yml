@@ -9,7 +9,7 @@ on:
       
   workflow_dispatch:
   schedule:
-    - cron: '45 11 * * 1-5' # London time 12:45
+    - cron: '0 12 * * 1-5' # London time 13:00. RG
   
 jobs:
   dbt-run:
