@@ -11,7 +11,8 @@ with artists as (
         artist_tier,
         birth_year,
         country,
-        biography
+        biography,
+        load_date
     from {{ ref('bronze__vw_artist_profiles') }}
 ),
 

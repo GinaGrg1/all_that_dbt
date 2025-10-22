@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='incremental'
+        )
+}}
+
 with sales as (
     select
         transaction_id,
@@ -6,7 +12,8 @@ with sales as (
         gallery_id,
         sale_date::date as sale_date,
         sale_price,
-        payment_method
+        payment_method,
+        load_date
     from {{ ref('bronze__vw_sales_transactions') }}
 ),
 
@@ -19,6 +26,13 @@ artwork as (
 
 final as (
     select
+        {{
+            dbutils.generate_surrogate_key([
+                sales.artwork_id, 
+                artwork.artist_id,
+                 sales.customer_id
+            ])
+        }} as sales_sk,
         sales.transaction_id,
         sales.sale_date,
         sales.artwork_id,
