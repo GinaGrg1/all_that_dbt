@@ -4,6 +4,13 @@ sources:
   - name: gallery_data
     database: PROD_RAW
     schema: SOURCE_DATA
+    config:
+      loaded_at_field: loaded_date
+      freshness: # default freshness
+        warn_after: {count: 24, period: hour}
+        error_after: {count: 48, period: hour}
+
+    # to add different freshness at table level add the config block below    
     tables:
       - name: artist_profiles
       - name: artwork_inventory
