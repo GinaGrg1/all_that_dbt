@@ -8,8 +8,8 @@ on:
       - 'art/**'
       
   workflow_dispatch:
-  schedule:
-    - cron: '0 12 * * 1-5' # London time 13:00. RG
+  #schedule:
+    #- cron: '0 12 * * 1-5' # London time 13:00. RG
   
 jobs:
   dbt-run:
