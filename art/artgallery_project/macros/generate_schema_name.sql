@@ -28,9 +28,7 @@ How it works
                 {%- set normalized_user = target.user | string | upper -%}
             {%- endif -%}
             {{ upper_custom_schema_name }}_{{ normalized_user }}
-        {%- elif target.name[0:2].lower() == "dev" -%}
-            {{ upper_custom_schema_name }}
-        {%- elif target.name[0:2].lower() == "qa" -%}
+        {%- elif target.name[0:2].lower() == "dev" or target.name[0:2].lower() == "qa" -%}
             {{ upper_custom_schema_name }}
         {%- else -%} 
             {{ upper_custom_schema_name | trim }}
