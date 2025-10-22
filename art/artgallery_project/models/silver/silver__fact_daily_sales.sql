@@ -1,6 +1,7 @@
 {{
     config(
-        materialized='incremental'
+        materialized='incremental',
+        on_schema_change='fail'
         )
 }}
 
@@ -26,13 +27,6 @@ artwork as (
 
 final as (
     select
-        {{
-            dbutils.generate_surrogate_key([
-                sales.artwork_id, 
-                artwork.artist_id,
-                 sales.customer_id
-            ])
-        }} as sales_sk,
         sales.transaction_id,
         sales.sale_date,
         sales.artwork_id,
@@ -40,10 +34,14 @@ final as (
         sales.customer_id,
         sales.gallery_id,
         sales.sale_price,
-        sales.payment_method   
+        sales.payment_method,
+        sales.load_date
     from sales
     inner join artwork 
         on sales.artwork_id = artwork.artwork_id
 )
 
 select * from final
+{% if is_incremental() %}
+    where load_date > (select coalesce(max(load_date), '1900-01-01') from {{ this }})
+{% endif %}

@@ -1,6 +1,7 @@
 {{
     config(
-        materialized='incremental'
+        materialized='incremental',
+        on_schema_change='fail'
         )
 }}
 
@@ -32,10 +33,14 @@ final as (
         artists.birth_year,
         year(current_date()) - artists.birth_year as artist_age,
         artists.country,
-        artists.biography   
+        artists.biography,
+        artists.load_date
     from artists
     left join commission_rates 
         on artists.artist_tier = commission_rates.artist_tier
 )
 
 select * from final
+{% if is_incremental() %}
+    where load_date > (select coalesce(max(load_date), '1900-01-01') from {{ this }})
+{% endif %}
