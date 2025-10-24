@@ -28,7 +28,9 @@ my_snowflake_profile:
       database: <database>  
       warehouse: <warehouse>  
       schema: <schema>  
-      authenticator: oauth  
+      authenticator: oauth
+      oauth_client_id: <OAuth client id>
+      oauth_client_secret: <OAuth client secret> 
       token: "{{ env_var('SNOWFLAKE_OAUTH_ACCESS_TOKEN') }}"
 
 Note: dbt expects an access token (not refresh token) for token:. So, you must obtain an access token using the refresh token in your pipeline.
